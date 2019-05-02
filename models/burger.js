@@ -1,5 +1,5 @@
 var orm = require("../config/orm.js");
-
+console.log(orm);
 var burger = {
     selectAll: function(cb){
         orm.selectAll("burgers", function(res){

@@ -8,7 +8,7 @@ function printQuestionMarks(num){
   return arr.toString();
 };
 
-var objToSql(ob){
+function objToSql(ob) {
     var arr = [];
     for (var key in ob){
         var value = ob[key];
@@ -44,7 +44,7 @@ var orm = {
 
         console.log(queryString);
 
-        connection.query(queryString, vals function(err, result){
+        connection.query(queryString, vals, function(err, result){
             if (err){
                 throw err;
             }
