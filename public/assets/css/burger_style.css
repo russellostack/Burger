@@ -1,0 +1,28 @@
+img{
+    margin:20px;
+    box-shadow:5px 5px 5px grey;
+    float: right;
+}
+body{
+    background-color: #ffbb0096
+
+}
+.container{
+    text-align:center;
+    margin:20px;
+}
+.tables{
+    border:2px solid black;
+    background-color: grey;
+    margin: 15px;
+    box-shadow: 10px 10px 10px grey;
+    float:right;
+}
+h1,h2,h3,ul,form{
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    float:center;
+}
+.btn{
+    background-color:rgba(0, 47, 255, 0.5);
+    margin: 5px;
+}
