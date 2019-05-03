@@ -1,43 +1,46 @@
 <div class="container">
     <div class="row">
+        <img src="assets/img/burger.png" class="img-fluid">
         <div class="col-md-12">
             <h1 class="text-center">Eat-Da-Burger</h1>
         </div>
         <div class="row">
-            <div class="col-sm-6 text-right">
+            <div class="col-sm-6">
                 <h2>Burgers to devour</h2>
-                <p>
-                    {{#each burger}}
-                    {{#unless devoured}}
-                    {{> burgers/burger-block devoured=false}}
-                    {{/unless}}
-                    {{/each}}
-                </p>
-            </div>
-            <div class="col-sm-6 text-right">
-                <h2>Devoured Burgers</h2>
-                <p>
+                <ul>
                     {{#each burgers}}
-                    {{#if devoured}}
-                    {{> burgers/burger-block devoured=true}}
-                    {{/if}}
+                        {{#unless devoured}}
+                            {{> burger-block devoured=false}}
+                        {{/unless}}
                     {{/each}}
-                </p>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <h2>Devoured Burgers</h2>
+                <ul>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            {{> burger-block devoured=true}}
+                        {{/if}}
+                    {{/each}}
+                </ul>
             </div>
         </div>
         <div class="row">
-            <form class="burger-adder">
-                <div class="form-group text-center">
-                    <div>
-                        <label for="burger">Add a Burger!</label>
+            <div class="col-md-12">
+                <form class="burger-adder">
+                    <div class="form-group text-center">
+                        <div>
+                            <label for="bu">Add a Burger!</label>
+                        </div>
+                        <input type="text" id="bu" name="name">
+                        <div class="row">
+                            <button type="submit" class="btn btn-success">Submit!</button>
+                        </div>
                     </div>
-                    <input type="text" id="burger" name="name">
-                </div>
+                </form>
+            </div>
+        </div>
 
-            </form>
-        </div>
-        <div class="row">
-            <button type="submit" class="btn btn-success" id="submit-burger">Submit!</button>
-        </div>
     </div>
 </div>
